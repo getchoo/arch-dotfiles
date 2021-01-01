@@ -5,24 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/bin/zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/bin/zinit" && command chmod g-rwX "$HOME/.local/bin/zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.local/bin/zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/bin/zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
+# load zgen
+source "$HOME/.local/bin/zgen/zgen.zsh"
 
 # plugins
-zinit light zsh-users/zsh-completions
-zinit light zdharma/fast-syntax-highlighting
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+zgen load zsh-users/zsh-completions src
+zgen load zdharma/fast-syntax-highlighting
+zgen load romkatv/powerlevel10k powerlevel10k
+zgen save
 
 setopt promptsubst
 setopt autocd
@@ -44,6 +34,7 @@ alias ls='lsd'
 alias la='ls -a'
 alias g='git'
 alias cat='bat'
+alias volume='pactl set-sink-volume alsa_output.pci-0000_08_00.3.iec958-stereo'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
