@@ -1,0 +1,10 @@
+export ZDOTDIR="$HOME/.config/zsh"
+export CARGO_HOME="$HOME/.local/share/cargo"
+export RUSTUP_HOME="$HOME/.local/share/rustup"
+export ZINIT[HOME_DIR]="$HOME/.local/zinit"
+export ZINIT[BIN_DIR]="$HOME/.local/zinit/bin"
+export ZINIT[PLUGINS_DIR]="$HOME/.local/zinit/plugins"
+export ZINIT[COMPLETIONS_DIR]="$HOME/.local/zinit/root_completions"
+export ZINIT[SNIPPETS_DIR]="$HOME/.local/zinit/snippets"
+
+export PATH=/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:"$CARGO_HOME/bin"
