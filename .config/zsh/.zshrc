@@ -12,17 +12,12 @@ source "$HOME/.local/bin/zgen/zgen.zsh"
 zgen load zsh-users/zsh-completions src
 zgen load zdharma/fast-syntax-highlighting
 zgen load romkatv/powerlevel10k powerlevel10k
-zgen save
 
 setopt promptsubst
 setopt autocd
 
-#tab completion
-autoload -U compinit
+# menu select
 zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
 
 # defaults
 export EDITOR='nvim'
