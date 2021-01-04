@@ -29,7 +29,6 @@ alias ls='lsd'
 alias la='ls -a'
 alias g='git'
 alias cat='bat'
-alias volume='pactl set-sink-volume alsa_output.pci-0000_08_00.3.iec958-stereo'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh

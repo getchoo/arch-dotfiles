@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -x "$(command -v xwinwrap)" ]; then
+  xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID $HOME/.config/xorg/background.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
+fi
