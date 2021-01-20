@@ -7,9 +7,12 @@
 source "$HOME/.local/bin/zgen/zgen.zsh"
 
 # plugins
+export NVM_DIR="$HOME/.local/bin/nvm"
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
+zgen load lukechilds/zsh-nvm
 zgen load zsh-users/zsh-completions src
 zgen load zdharma/fast-syntax-highlighting
-# zgen load jackharrisonsherlock/common
 zgen load romkatv/powerlevel10k powerlevel10k
 
 setopt promptsubst
