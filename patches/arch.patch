@@ -1,0 +1,10 @@
+--- a/.config/zsh/.zshrc
++++ b/.config/zsh/.zshrc
+@@ -31,6 +31,7 @@
+ alias la='ls -a'
+ alias g='git'
+ alias cat='bat'
++alias orphans="pacman -Qtdq | sudo pacman -Rns -"
+ 
+ # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+ [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
