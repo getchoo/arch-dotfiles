@@ -1,4 +1,7 @@
+add_newline = false
+
 [character]
+success_symbol = "[➜](bold green)"
 error_symbol = "[✖](bold red) "
 
 [cmd_duration]
@@ -11,7 +14,7 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 read_only = " "
 
 [git_branch]
-format = "[$symbol$branch]($style) "
+format = "[$symbol$branch]($style)"
 symbol = "🍣 "
 style = "bold yellow"
 
@@ -24,15 +27,15 @@ progress_divider = " of "
 
 [git_status]
 conflicted = "⚔️ "
-ahead = "🏎️  💨 ×${count}"
-behind = "🐢 ×${count}"
-diverged = "🔱 🏎️  💨 ×${ahead_count} 🐢 ×${behind_count}"
+ahead = " 🏎️ ×${count}"
+behind = " 🐢 ×${count}"
+diverged = " 🔱🏎️ ×${ahead_count} 🐢 ×${behind_count}"
 untracked = " 🛤️  ×${count}"
 stashed = "📦 "
-modified = "📝 ×${count}"
-staged = " 🗃️  ×${count}"
-renamed = "📛 ×${count}"
-deleted = "🗑️  ×${count}"
+modified = " 📝 ×${count}"
+staged = " 🗃️ ×${count}"
+renamed = " 📛 ×${count}"
+deleted = " 🗑️  ×${count}"
 style = "bright-white"
 format = "$all_status$ahead_behind"
 
