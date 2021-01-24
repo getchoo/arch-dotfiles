@@ -14,8 +14,16 @@ znap source lukechilds/nvm
 znap source zsh-users/zsh-completions src
 znap source zdharma/fast-syntax-highlighting
 
-setopt promptsubst
+# options
 setopt autocd
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+
+# enable history
+HISTFILE="$HOME/.cache/zsh/history"
+HISTSIZE=100
+SAVEHIST=1000
 
 # menu select
 zstyle ':completion:*' menu select
