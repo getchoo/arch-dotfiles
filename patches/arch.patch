@@ -1,9 +1,7 @@
---- .config/zsh/.zshrc
-+++ .config/zsh/.zshrc
-@@ -38,5 +38,6 @@
+--- a/.config/zsh/.zshrc
++++ b/.config/zsh/.zshrc
+@@ -45,5 +45,6 @@ alias ls='exa'
  alias la='ls -a'
  alias g='git'
  alias cat='bat'
 +alias orphans="pacman -Qtdq | sudo pacman -Rns -"
- 
- eval "$(starship init zsh)"
