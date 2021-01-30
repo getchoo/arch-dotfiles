@@ -11,18 +11,16 @@ source "$ZDOTDIR/zinit/bin/zinit.zsh"
 
 # load plugins
 export NVM_DIR="$HOME/.local/bin/nvm"
-export NVM_NO_USE=true
-zinit for \
-	light-mode "lukechilds/zsh-nvm" \
+zinit wait lucid for \
 	light-mode "zsh-users/zsh-completions" \
-	light-mode "zdharma/fast-syntax-highlighting"
+	light-mode "zdharma/fast-syntax-highlighting" \
+#	light-mode "lukechilds/zsh-nvm"
 
 # completion 
 autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complete
-zmodload zsh/complist
 compinit
+zstyle ':completion:*' menu select
+#zmodload zsh/complist
 
 # options
 setopt autocd
