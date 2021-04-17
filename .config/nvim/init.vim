@@ -3,15 +3,17 @@
 "
 
 " plugins
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin()
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'itchyny/lightline.vim'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
 " settings
-colorscheme dracula 
+colorscheme nord 
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
 syntax on
 filetype plugin indent on

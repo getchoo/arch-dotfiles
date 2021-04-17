@@ -91,4 +91,4 @@ mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 import:
-  - /home/seth/.config/alacritty/dracula.yml
+  - /home/seth/.config/alacritty/nord-alacritty/src/nord.yml

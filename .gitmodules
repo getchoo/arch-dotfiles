@@ -1,3 +1,6 @@
 [submodule ".local/bin/fast-syntax-highlighting"]
 	path = .local/bin/fast-syntax-highlighting
 	url = https://github.com/zdharma/fast-syntax-highlighting
+[submodule ".config/alacritty/nord-alacritty"]
+	path = .config/alacritty/nord-alacritty
+	url = https://github.com/arcticicestudio/nord-alacritty.git
