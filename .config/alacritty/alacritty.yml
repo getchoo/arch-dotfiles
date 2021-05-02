@@ -3,16 +3,16 @@
 #
 
 dimensions:
-  colums: 85
+  colums: 80
   rows: 25
 
 padding:
-  x: 3
-  y: 3
+  x: 5 
+  y: 5 
 
-dynamic_padding: true
+#dynamic_padding: true
 
-decorations: full
+# decorations: full
 
 font:
   normal:
@@ -24,7 +24,7 @@ font:
   bold_italic:
     family: Hack Nerd Font
 
-size: 12
+size: 14 
 
 key_bindings:
   - { key: V,        mods: Command,       action: Paste                        }
@@ -91,4 +91,4 @@ mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 import:
-  - /home/seth/.config/alacritty/nord-alacritty/src/nord.yml
+  - /home/seth/.config/alacritty/base16-alacritty/colors/base16-dracula-256.yml
